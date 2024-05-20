@@ -51,7 +51,7 @@ To use SLURM's `sbatch` command and handle automatic restarts when the session r
     signal.signal(signal.SIGURG, signal_handler)
     ```
 
-2. **Modify the SLURM Job Script (`restart.sh`)** by changing line 55 from `bash <restart.sh` to `sbatch <restart.sh`. To better understand how this works, check out section 15.4 of [Batch schedulers: Bringing order to chaos](https://learning.oreilly.com/library/view/parallel-and-high/9781617296468/OEBPS/Text/ch15_Robey.htm#sigil_toc_id_306) and read the [slurm documentation](https://slurm.schedmd.com/sbatch.html).
+2. **Modify the SLURM Job Script (`restart.sh`)** by changing line 55 from `bash <restart.sh` to `sbatch <restart.sh`. To better understand how this works, check out section 15.4 of [Batch schedulers: Bringing order to chaos](https://learning.oreilly.com/library/view/parallel-and-high/9781617296468/OEBPS/Text/ch15_Robey.htm#sigil_toc_id_306) (MBZUAI students need to use their university email to access this website) and read the [slurm documentation](https://slurm.schedmd.com/sbatch.html).
 4. **Monitor the job**:
     - SLURM will handle the execution and restart of the job as needed.
     - The job script will write outputs to `run.out` and manage session states using the `RESTART` and `DONE` files.
