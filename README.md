@@ -27,7 +27,7 @@ This project illustrates how to use a Python script to handle automatic restarts
 
 3. **Resume the script**: Run the script again to resume from the last saved state, passing the run_id that is saved in `RESTART` file.
     ```bash
-    python main.py
+    python main.py --run-id <run-id>
     ```
 
 ### Using Bash Script for Automatic Restart
