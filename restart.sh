@@ -43,7 +43,6 @@ if [ ! -e DONE ]; then
    # Entrypoint command here
    python main.py $run_id                                &>> ${OUTPUT_FILE}
    STATUS=$?
-   echo "Finished test run"                              >> ${OUTPUT_FILE}
 
    if [ ${COUNT} -ge ${MAX_RESTARTS} ]; then
       echo "=== Reached maximum number of restarts ==="  >> ${OUTPUT_FILE}
