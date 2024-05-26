@@ -41,7 +41,7 @@ if [ ! -e DONE ]; then
    fi
 
    # Entrypoint command here
-   python main.py $run_id                                &>> ${OUTPUT_FILE}
+   srun python main.py $run_id                                &>> ${OUTPUT_FILE}
    STATUS=$?
 
    if [ ${COUNT} -ge ${MAX_RESTARTS} ]; then
